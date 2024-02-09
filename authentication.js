@@ -29,10 +29,18 @@ function signupfunction(){
     if (existinguser){
         alert("User already Exist.");
     } else {
-        users.push({username, password});
+       
+        var newUser = {username, password, email };
+        users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
         alert("Sign up succesful!");
         window.location.href = 'login.html';
+        
+        var userData = {
+            username: username,
+            email: email,
+        };
+        localStorage.setItem('currentUser', JSON.stringify(userData));
     }
 
 
@@ -56,6 +64,12 @@ function loginfunction(){
 if (!user){
     alert('User does not exist.');
 } else {
+
+    var userData = {
+        username: user.username,
+        email: user.email,
+    };
+    localStorage.setItem('currentUser', JSON.stringify(userData));
     if (user.password === password){
         window.location.href = 'index.html';
     } else {
@@ -65,5 +79,6 @@ if (!user){
 }
 
 function logout(){
+    localStorage.removeItem('currentUser');
     window.location.href = 'login.html';
 }
