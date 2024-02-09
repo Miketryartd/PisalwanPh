@@ -16,7 +16,7 @@
             <li><h1>💚PISALWAN</h1></li>
             <li><a href="#">Home</a></li>
             <li><input type="text" placeholder="Search..." id="searchinput"></li>
-            <li><button onclick="searchfunction()" id="searchbtn"><i class='bx bx-search' ></i></button></li>
+            <li><button onclick="searchFunction()" id="searchbtn"><i class='bx bx-search' ></i></button></li>
             <li><button onclick="wishlistfunction()" id="wish"><i class='bx bx-heart' ></i>Wishlist</button></li>
             <li><button onclick="cartFunction()" id="cart"><i class='bx bx-cart' ></i>Cart</button></li>
             <li><button onclick="menufunction()" id="menu">Menu<i class='bx bxs-chevron-down' ></i></button></li>
@@ -24,36 +24,47 @@
     </div>
     <!--navigationsflex/-->
 
+
+
+<!---chatHlper-->
+<div class="invChat">
+    <button onclick="chatBtn()" id="chatIcon"><i class='bx bx-message-rounded-dots' ></i></button>
+</div>
+<!---done-->
+
+
+
+
 <!---navside-->
 <div class="invnav">
-<div class="navside">
+<div class="navside" id="navside">
     <ul>
         <li><div class="category" id="categoriesContainer"></li>
            <li> <h3>Category</h3></li>
             <li><div class="categoryline"></div></li>
-           <li><button>Recommended</button></li> 
-           <li><button onclick="fetchItems('smartphones')">Smartphones</button></li>
-           <li><button onclick="getProducts('laptops')">Fragrances</button></li>
-           <li><button>Furniture</button></li>
-           <li><button>Home Decorations</button></li>
+           <li><button id="recommended">Recommended</button></li> 
+           <li><button onclick="fetchItems('smartphones')"></button></li>
+           <li><button onclick="getProducts('laptops')"></button></li>
+           <li><button></button></li>
+           <li><button> </button></li>
            <div id="hiddenbtns">
-            <li><button>Laptops</button></li>
-            <li><button>Skincare</button></li>
-            <li><button>Groceries</button></li>
-            <li><button>Tops</button></li>
-            <li><button>Motorcycle</button></li>
-            <li><button>Automotive</button></li>
-            <li><button>Sunglasses</button></li>
-            <li><button>Womens Jewellery</button></li>
-            <li><button>Womens Bags</button></li>
-            <li><button>Mens Watches</button></li>
-            <li><button>Womens Watches</button></li>
-            <li><button>Mens Shoes</button></li>
-            <li><button>Mens Shirts</button></li>
-            <li><button>Womens Dresses</button></li>
-            <li><button>Lighting</button></li>
+            <li><button></button></li>
+            <li><button></button></li>
+            <li><button></button></li>
+            <li><button></button></li>
+            <li><button></button></li>
+            <li><button></button></li>
+            <li><button></button></li>
+            <li><button> </button></li>
+            <li><button> </button></li>
+            <li><button> </button></li>
+            <li><button> </button></li>
+            <li><button> </button></li>
+            <li><button> </button></li>
+            <li><button> </button></li>
+            <li><button></button></li>
            </div>
-           <button onclick="more()" id="more">More<i class='bx bx-chevron-down' id=""></i></button>
+          
     </div>
     </ul>
 </div>
@@ -78,9 +89,66 @@
 <!--featured products-close-->
 <!--hiddencontainers-->
 
+<!---ChatBotContainer-->
+<div class="invChatContainer">
+    <div id="chatBotContainer" id="chatBotContainer">
+        <div class="chatBotContainerChild">
+            <h1><i class='bx bx-bot' ></i></h1>
+
+        </div>
+
+        <div class="chatOptionsContainer">
+            <button onclick="firstOption()" id="firstOption">Help</button>
+        </div>
+
+    </div>
+    
+</div>
+
+<!---end-->
+
+<!--Search-Wrapper-->
+<div class="invwrapper">
+<div class="wrapper" id="results">
+    <div class="wrapperBox">
+        <div class="wrapperImg">
+        <img src="imgcard/0c27f9d6d4a1b54cbe382e1027b74dc5.png">
+        <div class="descriptionWrapper">
+            <h1>S</h1>
+        </div>
+
+    </div>
+    <div class="wrapperImg">
+        <img src="imgcard/0c27f9d6d4a1b54cbe382e1027b74dc5.png">
+        <div class="descriptionWrapper">
+            <h1>S</h1>
+        </div>
+
+    </div>
+        
+    </div>
+</div>
+
+</div>
+<!--end-->
+
+
 <!---overflow-->
 <div class="overflow" id="overflow"></div>
 <!---overflow/-->
+
+<!--- Real Container Of Products-->
+<div class="invReal">
+<div class="mainProductContainer" id="mainProductContainer">
+    <button onclick="eliminate()" id="eliminate">X</button>
+    <div class="thumbnail">
+        <img src="">
+    </div>
+
+</div>
+</div>
+
+<!--fetchDone-->
 
 
 
@@ -118,8 +186,8 @@
 <div class="featured1" id="featured1">
     <button onclick="cancelfeatured1()" id="cancelfeatured1">X</button>
     <div id="count1"></div>
-    
-    <button onclick="test1(product1, productName)" id="f1cart">s</button>
+
+   
 <div class="f1img">
     <button onclick="f1arrow()" id="f1arrow"><i class='bx bx-right-arrow-alt'></i></button>
     <button onclick="f1arrowback()" id="f1arrowback"><i class='bx bx-left-arrow-alt' ></i></button>
@@ -136,6 +204,7 @@
     <div class="dealsContainer" id="dealsContainer">
         <!--onclick=test1(product1, productName)-->
         <div class="imgbox" onclick="featured1()" id="imgbox1">
+         
             <img src="imgcard/ph-11134207-7qukx-lgnjnjg8t7mub4.jpg" alt="Sweater">
             <div class="description">
                 <h1>SYZ New Unisex Plain Pullover Crew Neck Sweater for Men Women</h1>
@@ -183,12 +252,14 @@
 <!---mainshop-->
 <div class="invmainshop">
     <div class="mainshopContainer" id="mainshopContainer">
-        <!--<div class="mainshopimgbox" id="mainshopimgbox">-->
-            <!--<div class="mainshopdescription">
+        <!--<div class="mainshopimgbox" id="mainshopimgbox">
+            <p id="discounted">5%</p>
+         <div class="mainshopdescription">
                 <h1></h1>
                 <p></p>
+                
             </div>
-        </div>--->
+        </div>/!-->
    
 
   
