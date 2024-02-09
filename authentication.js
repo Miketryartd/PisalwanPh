@@ -80,7 +80,8 @@ if (!user){
 
 window.onload = function() {
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if (!currentUser) {
+    var currentPage = window.location.pathname;
+    if (!currentUser && currentPage !== '/signup.html') {
         window.location.href = 'signup.html'; 
     }
 };
