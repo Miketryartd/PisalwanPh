@@ -19,7 +19,7 @@ body{
     height: 75px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.067);
     background-color: white;
-    z-index: 1000;
+    z-index: 988;
     
 }
 .navflex ul li h1{
@@ -91,11 +91,18 @@ margin-left: 275px;
     top: 90px;
     height: 2000px;
     width: 10%;
-    z-index: 2000;
+    z-index: 900;
     background-color: rgb(255, 255, 255);
    
 }
 .navside h3{
+    color: gray;
+}
+.navside ul li #recommended{
+    position: relative;
+    border: none;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0);
     color: gray;
 }
 .navside .categoryline{
@@ -103,21 +110,33 @@ margin-left: 275px;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.275);
     height: 1px;
 }
+#categoryele{
+    position: relative;
+    top:-80px;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    color: gray;
+}
+#categoryele:hover{
+    transition: 0.2s ease;
+    background-color: rgba(204, 203, 208, 0.62);
+}
 .navside ul li {
     list-style: none;
 }
-.navside li button{
+.navside li{
     cursor: pointer;
     border: none;
     background-color: rgba(255, 255, 255, 0);
     font-size: 1.1rem;
-    color: rgb(183, 183, 183);
+   color: gray;
     transition: 0.2s ease;
 }
-.navside li button:hover{
+.navside li:hover{
     transition: 0.2s ease;
-    background-color: rgba(156, 156, 186, 0.723);
-    color: black;
+    background-color: rgba(204, 203, 208, 0.62);
+  
 }
 .navside ul  #more{
     color: gray;
@@ -261,20 +280,20 @@ margin-top: 13px;
 
 .cartContainer{
     position: fixed;
-    top: 1px;
+    top: 77px;
     left:1250px;
     background-color: rgb(235, 238, 243);
     width: 20%;
     height: 500px;
     max-height: 500px;
-    z-index: 999;
+    z-index: 1000;
     overflow: auto;
     display: none;
 }
-.cartContainer ul #listItem{
+.cartContainer ul li{
     list-style: none;
 }
-.cartContainer #listItem img{
+.cartContainer li img{
     height: 200px;
     margin-top: 100px;
 }
@@ -478,12 +497,12 @@ align-items: center;
 }
 .invmainshop .mainshopContainer{
     width: 50%;
-    height: 1000px;
+    height: 100px;
     background-color: rgb(255, 255, 255);
     display: grid;
     gap: 1rem;
     margin-top: 150px;
-    grid-template-columns: repeat(auto-fit,minmax(150px, auto));
+    grid-template-columns: repeat(auto-fit,minmax(200px, auto));
 }
 .mainshopContainer .mainshopimgbox{
    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.092);
@@ -507,12 +526,21 @@ border-radius:7px;
 }
 .mainshopContainer .mainshopimgbox img{
     height:200px;
-
+   object-fit: cover;
     width: 100%;
 
     transition: 0.2s ease;
     
 
+}
+.mainshopContainer #discounted{
+  
+   position: relative;
+   top: 200px;
+    font-size: 1.2rem;
+width: 55%;
+    background-color: rgba(80, 255, 133, 0.767);
+    border-top-right-radius: 20px;
 }
 
 .mainshopContainer .mainshopimgbox .mainshopdescription{
@@ -527,10 +555,12 @@ border-radius:7px;
 
 /*footer*/
 .invfooter{
+    
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top:1000px;
+margin-top:2200px;
+
 }
 .invfooter .footer{
     width: 50%;
@@ -549,13 +579,13 @@ margin-top:1000px;
 }
 .footer .cs{
     position: absolute;
-    top:2925px;
+    top:3226px;
     left:800px;
     margin-top: 50px;
 }
 .footer .payment{
     position: absolute;
-    top:2925px;
+    top:3226px;
     left:1200px;
     margin-top: 50px;
 }
@@ -573,3 +603,150 @@ margin-top:1000px;
     width: 100%;
 }
 /*footer-close*/
+
+/* fetchContainer*/
+.invReal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.invReal .mainProductContainer{
+    width: 50%;
+    background-color:rgba(246, 246, 246, 0.99);
+    height: 500px;
+    z-index: 1200;
+    position: fixed;
+    margin-top:350px;
+   display: none;
+    border-radius: 20px;
+
+}
+.mainProductContainer .thumbnail img{
+    
+}
+.mainProductContainer #eliminate{
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    margin-left:930px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+/*done*/
+
+/*wrapper*/
+.invwrapper{
+    position: relative;
+    top:-225px;
+    left: 600px;
+}
+.wrapper{
+    width: 40%;
+    height: 200px;
+    background-color: rgb(231, 228, 243);
+    box-shadow: 0px 0px 2px rgba(139, 136, 136, 0.64);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 3000;
+    overflow: auto;
+    max-height: 2000px;
+    position: fixed;
+    
+}
+.invwrapper .wrapper .wrapperBox{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(300px, auto));
+
+}
+.wrapperBox .wrapperImg .descriptionWrapper{
+    background-color: white;
+    width: 95%;
+    margin-left: 10px;
+}
+.wrapper .wrapperBox img{
+    height:100px ;
+    width: 95%;
+    box-shadow: 0px 0px 2px rgb(162, 161, 161);
+    background-color: white;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-left: 9px;
+}
+/*done*/
+
+/*chatHelper*/
+.invChat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#chatIcon{
+    font-size: 2rem;
+    color: rgb(20, 255, 165);
+    z-index: 5000;
+    position: fixed;
+    top: 700px;
+  left: 1500px;
+   background-color: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.431);
+    border-color: rgba(0, 0, 0, 0.355);
+    border-radius: 35px;
+    border-bottom-left-radius: 0px;
+    height: 35px;
+    
+    cursor: pointer;
+}
+
+/*chatContainer*/
+.invChatContainer{
+display: flex;
+justify-content: end;
+align-items: end;
+}
+#chatBotContainer{
+width:15%;
+height: 500px;
+background-color: rgb(255, 255, 255);
+box-sizing: border-box;
+border: solid 3px rgba(0, 0, 0, 0.12);
+border-radius: 10px;
+position: fixed;
+z-index: 5000;
+top: 410px;
+left:1600px;
+display: none;
+}
+#chatBotContainer .chatBotContainerChild{
+    color: rgb(20, 255, 165);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.267);
+}
+#chatBotContainer ul li{
+    list-style: none;
+    background-color: rgba(233, 235, 236, 0.726);
+}
+
+
+/*first Option*/
+#firstOption{
+    border:none;
+    font-size: 1.2rem;
+    width: 100%;
+    position: relative;
+    top: 432px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background-color: rgb(104, 206, 147);
+}
+#firstOption:active{
+    transition: 0.2s ease;
+   transform:translateY(10px);
+}
+/*end/
+
+
+
+/*ned*/
+
+
+/*ChatDone*/
