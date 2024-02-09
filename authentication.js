@@ -78,6 +78,12 @@ if (!user){
 }
 }
 
+window.onload = function() {
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (!currentUser) {
+        window.location.href = 'signup.html'; 
+    }
+};
 function logout(){
     localStorage.removeItem('currentUser');
     window.location.href = 'login.html';
